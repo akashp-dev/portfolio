@@ -34,7 +34,12 @@ export function ExperienceItem({ period, title, company, description, technologi
         <p className="text-muted-foreground mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
-            <Badge key={tech}>{tech}</Badge>
+            <span
+              key={tech}
+              className="mr-2 mt-2 rounded bg-neutral-900 px-3 py-1 text-sm font-medium text-purple-400"
+            >
+              {tech}
+            </span>
           ))}
         </div>
       </motion.div>
@@ -68,7 +73,7 @@ export function ExperienceSection() {
   ];
 
   return (
-    <div className="border-b border-neutral-900 pb-24">
+    <section id="experience" className="border-b border-neutral-900 pb-24">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -89,6 +94,6 @@ export function ExperienceSection() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

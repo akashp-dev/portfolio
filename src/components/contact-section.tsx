@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 const contact = {
   address: "Los Angeles, California",
@@ -8,7 +8,7 @@ const contact = {
 
 export function ContactSection() {
   return (
-    <div className="border-b border-neutral-900 pb-20">
+    <section id="contact" className="border-b border-neutral-900 pb-20">
       <h1 className="my-10 text-center text-4xl">Get in Touch</h1>
       <div className="text-center tracking-tighter">
         <p className="my-4">{contact.address}</p>
@@ -17,6 +17,6 @@ export function ContactSection() {
           {contact.email}
         </a>
       </div>
-    </div>
+    </section>
   );
 }

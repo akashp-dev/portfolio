@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
@@ -11,10 +12,46 @@ export function Header() {
       </div>
 
       <nav className="flex gap-8 text-lg m-9">
-        <a href="#about" className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition">About</a>
-        <a href="#experience" className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition">Experience</a>
-        <a href="#projects" className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition">Projects</a>
-        <a href="#contact" className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition">Contact</a>
+        <a 
+          href="#about" 
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+          }} 
+          className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition"
+        >
+          About
+        </a>
+        <a 
+          href="#experience" 
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });
+          }} 
+          className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition"
+        >
+          Experience
+        </a>
+        <a 
+          href="#projects" 
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+          }} 
+          className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition"
+        >
+          Projects
+        </a>
+        <a 
+          href="#contact" 
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+          }} 
+          className="hover:text-purple-400 hover:underline hover:underline-offset-4 hover:drop-shadow-md transition"
+        >
+          Contact
+        </a>
       </nav>
 
       <div className="flex justify-center items-center gap-6 m-9 text-2xl">
