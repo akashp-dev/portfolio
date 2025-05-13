@@ -12,7 +12,7 @@ export function Footer() {
         </div>
         <div className="flex items-center space-x-6">
           <Link
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/akashponnam"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -21,7 +21,7 @@ export function Footer() {
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link
-            href="https://github.com/"
+            href="https://github.com/akashp-dev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -30,7 +30,7 @@ export function Footer() {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href="https://twitter.com/"
+            href="https://twitter.com/akspnm"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -39,7 +39,7 @@ export function Footer() {
             <span className="sr-only">Twitter</span>
           </Link>
           <Link
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1q3j5MPwENzIyh6J6SsWEyUGZazft04rp/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"

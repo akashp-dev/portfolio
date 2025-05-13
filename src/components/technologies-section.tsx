@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
-import { SiSnowflake, SiTableau, SiR } from "react-icons/si";
+import { SiSnowflake, SiTableau, SiR, SiPython, SiMysql, SiOracle, SiGit, SiDocker, SiMongodb, SiPostgresql } from "react-icons/si";
+import { FaAws, FaChartBar } from "react-icons/fa";
+import { RiFileExcel2Fill } from "react-icons/ri";
+import { SiJupyter } from "react-icons/si";
 import { motion, Variants } from "framer-motion";
 
 const iconVariants = (duration: number): Variants => ({
@@ -27,43 +30,95 @@ export function TechnologiesSection() {
       >
         Technologies
       </motion.h2>
-      <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1.5 }}
-        className="flex flex-wrap items-center justify-center gap-4"
-      >
-        <motion.div variants={iconVariants(2.5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="h-20 w-20" />
+      
+      <div className="mb-12">
+        <h3 className="text-xl font-light mb-4 text-center text-purple-400">Data & Analytics</h3>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.5 }}
+          className="flex flex-wrap items-center justify-center gap-4"
+        >
+          <motion.div variants={iconVariants(2.5)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiPython className="text-6xl text-blue-500" />
+            <p className="text-center mt-2 text-sm">Python</p>
+          </motion.div>
+          <motion.div variants={iconVariants(3.0)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiMysql className="text-6xl text-blue-600" />
+            <p className="text-center mt-2 text-sm">SQL</p>
+          </motion.div>
+          <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <FaChartBar className="text-6xl text-yellow-500" />
+            <p className="text-center mt-2 text-sm">Power BI</p>
+          </motion.div>
+          <motion.div variants={iconVariants(4.5)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiTableau className="text-6xl text-blue-400" />
+            <p className="text-center mt-2 text-sm">Tableau</p>
+          </motion.div>
+          <motion.div variants={iconVariants(5.0)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiR className="text-6xl text-blue-600" />
+            <p className="text-center mt-2 text-sm">R</p>
+          </motion.div>
+          <motion.div variants={iconVariants(3.8)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiJupyter className="text-6xl text-orange-500" />
+            <p className="text-center mt-2 text-sm">Jupyter</p>
+          </motion.div>
+          <motion.div variants={iconVariants(4.0)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <RiFileExcel2Fill className="text-6xl text-green-600" />
+            <p className="text-center mt-2 text-sm">Excel</p>
+          </motion.div>
         </motion.div>
-        <motion.div variants={iconVariants(3.0)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" className="h-20 w-20" />
+      </div>
+      
+      <div className="mb-12">
+        <h3 className="text-xl font-light mb-4 text-center text-purple-400">Cloud & Infrastructure</h3>
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1.5 }}
+          className="flex flex-wrap items-center justify-center gap-4"
+        >
+          <motion.div variants={iconVariants(2.8)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <FaAws className="text-6xl text-yellow-500" />
+            <p className="text-center mt-2 text-sm">AWS</p>
+          </motion.div>
+          <motion.div variants={iconVariants(3.2)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiSnowflake className="text-6xl text-blue-300" />
+            <p className="text-center mt-2 text-sm">Snowflake</p>
+          </motion.div>
+          <motion.div variants={iconVariants(4.2)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiDocker className="text-6xl text-blue-500" />
+            <p className="text-center mt-2 text-sm">Docker</p>
+          </motion.div>
+          <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiGit className="text-6xl text-orange-600" />
+            <p className="text-center mt-2 text-sm">Git</p>
+          </motion.div>
         </motion.div>
-        <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" className="h-20 w-20" />
+      </div>
+      
+      <div>
+        <h3 className="text-xl font-light mb-4 text-center text-purple-400">Databases</h3>
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1.5 }}
+          className="flex flex-wrap items-center justify-center gap-4"
+        >
+          <motion.div variants={iconVariants(4.2)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiOracle className="text-6xl text-red-600" />
+            <p className="text-center mt-2 text-sm">Oracle</p>
+          </motion.div>
+          <motion.div variants={iconVariants(3.8)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiMongodb className="text-6xl text-green-500" />
+            <p className="text-center mt-2 text-sm">MongoDB</p>
+          </motion.div>
+          <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate" className="rounded-2xl p-4">
+            <SiPostgresql className="text-6xl text-blue-500" />
+            <p className="text-center mt-2 text-sm">PostgreSQL</p>
+          </motion.div>
         </motion.div>
-        <motion.div variants={iconVariants(4.0)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg" alt="Excel" className="h-20 w-20" />
-        </motion.div>
-        <motion.div variants={iconVariants(4.5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <SiTableau className="text-7xl text-indigo-400" />
-        </motion.div>
-        <motion.div variants={iconVariants(5.0)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <SiR className="text-7xl text-blue-400" />
-        </motion.div>
-        <motion.div variants={iconVariants(2.8)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" className="h-20 w-20 object-contain" />
-        </motion.div>
-        <motion.div variants={iconVariants(3.2)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <SiSnowflake className="text-7xl text-sky-400" />
-        </motion.div>
-        <motion.div variants={iconVariants(3.8)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter" className="h-20 w-20" />
-        </motion.div>
-        <motion.div variants={iconVariants(4.2)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" className="h-20 w-20" />
-        </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

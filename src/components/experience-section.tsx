@@ -50,30 +50,37 @@ export function ExperienceItem({ period, title, company, description, technologi
 export function ExperienceSection() {
   const experiences = [
     {
-      period: "Jul 2024 – Present",
+      period: "Oct 2024 – Present",
+      title: "Data Analyst/Engineer",
+      company: "McKinsey & Company, Dallas, CA",
+      description: "•At McKinsey & Company, I worked as a Data Engineer and Analyst, leading initiatives that optimized supply chain analytics, automated ETL workflows, and enhanced business intelligence for global clients. I engineered data pipelines using AWS Glue and PyTorch, cutting model training time by 35% and unlocking $2M in projected revenue. My SQL and Power BI work reduced query times by 60% and streamlined reporting across 10M+ records. I also built Flask-based dashboards for real-time insights used by 200+ stakeholders and enforced data governance frameworks that passed audits with zero findings.",
+      technologies: ["SQL", "Python", "Power BI", "Snowflake", "AWS", "Data Modeling", "ETL"]
+    },
+    {
+      period: "Jun 2023 – Jun 2024",
+      title: "Data Analytics Freelancer",
+      company: "Self-Employed",
+      description: "• Developed customized data analytics solutions for 3 small businesses, resulting in 20% cost reduction\n• Designed and implemented automated dashboards in Tableau and Power BI for real-time KPI tracking\n• Created predictive models for inventory management using Python and scikit-learn\n• Optimized database queries and ETL processes, improving data processing speed by 35%",
+      technologies: ["Python", "SQL", "Tableau", "Power BI", "scikit-learn", "Data Visualization"]
+    },
+    {
+      period: "Aug 2021 – Jul 2022",
       title: "Data Analyst",
-      company: "Infokeys Inc (Irving, TX)",
-      description: "Designed and executed SQL-based models to analyze entity-level performance trends and track operational KPIs across large-scale datasets. Developed dynamic dashboards in Power BI and Excel for real-time operational visibility. Collaborated on Snowflake data layer implementations and conducted root cause analysis for data anomalies. Automated reporting solutions reduced executive deliverable turnaround by 40%.",
-      technologies: ["SQL", "Power BI", "Excel", "Snowflake", "AWS", "Data Modeling", "Automation"]
+      company: "Dell Technologies, India",
+      description: "• At Dell Technologies, I contributed as a Data Analyst, automating ETL workflows using AWS Glue and SQL to streamline enterprise data integration and reduce manual effort. I analyzed over 20 GB of raw business data to drive cost analysis and operational insights, while optimizing Power BI reports to enhance visibility for global teams. My dashboards and visualizations supported 100+ users with self-service analytics, and my work with Salesforce and Redshift ensured accurate, scalable reporting across millions of records. I also aligned analytics delivery with Agile practices to improve efficiency and responsiveness to shifting business needs.",
+      technologies: ["SQL", "Python", "Snowflake", "Data Analysis", "Excel", "ETL Processes"]
     },
     {
-      period: "Aug 2023 – Jun 2024",
-      title: "Open Source Contributor",
-      company: "Freelance",
-      description: "Contributed to open-source data analytics projects such as DataVista, InsightFlow, and ChartSmart by enhancing interactive dashboards, optimizing SQL queries for large datasets, and improving data visualization using Power BI and Python libraries. Collaborated with distributed teams to integrate APIs, automate reporting workflows, and enhance code maintainability for better scalability. Focused on building accessible, responsive analytics tools and reducing technical debt across projects.",
-      technologies: ["Python", "SQL", "Power BI", "Snowflake", "Data Visualization", "Open Source"]
-    },
-    {
-      period: "Jan 2022 – Jun 2022",
+      period: "Feb 2021 – Jul 2021",
       title: "Data Analyst Intern",
-      company: "OrionTec, Inc (Vijayawada, India)",
-      description: "Conducted data profiling and exploratory analysis across business-critical datasets. Developed automation scripts and optimized Snowflake-based dashboards. Created ad hoc reports and contributed to data model designs that improved query performance by 30%. Assisted in documenting key metrics and BI processes.",
-      technologies: ["Python", "SQL", "Snowflake", "Data Analysis", "Automation", "Data Modeling"]
+      company: "Trigent Software, India",
+      description: "• At Trigent Software, I worked as a Data Analyst Intern supporting senior analysts by processing structured and unstructured data using Python and SQL, improving report accuracy and pipeline reliability. I built over four scalable pipelines with AWS services like BigQuery and Dataflow for real-time analytics, and improved data warehousing using MongoDB and Oracle. My work included consolidating enterprise data using Django, enhancing Git-based collaboration, and creating KPI dashboards in Excel to support strategic decisions. I also automated workflows using data mining techniques, boosting efficiency in risk and performance monitoring tasks.",
+      technologies: ["Python", "SQL", "Data Extraction", "Data Transformation"]
     }
   ];
 
   return (
-    <section id="experience" className="border-b border-neutral-900 pb-24">
+    <section id="experience" className="pb-24">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}

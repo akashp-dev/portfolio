@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import { StrictMode } from "react";
+import { InteractiveLight } from "@/components/ui/InteractiveLight";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,11 +27,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="text-neutral-300 selection:bg-white-300 selection:text-cyan-900">
-      <body className="overflow-x-hidden antialiased bg-[#877E95]">
-        <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden">
-          <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-        </div>
+    <html lang="en" className="text-neutral-300 selection:bg-cyan-300 selection:text-cyan-900">
+      <body className="overflow-x-hidden antialiased">
+        <InteractiveLight />
         <StrictMode>
           <ClientBody>{children}</ClientBody>
         </StrictMode>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import { SequentialRevealName } from "./ui/SequentialRevealName";
 
 const container = (delay: number): Variants => ({
   hidden: { x: -100, opacity: 0 },
@@ -13,18 +14,13 @@ const container = (delay: number): Variants => ({
 
 export function HeroSection() {
   return (
-    <section className="border-b border-neutral-900 pb-4 lg:mb-35 container">
+    <section className="pb-4 lg:mb-35 container">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <motion.h1
-              variants={container(0)}
-              initial="hidden"
-              animate="visible"
-              className="pb-16 text-5xl md:text-6xl lg:text-8xl font-extralight tracking-tight lg:mt-16"
-            >
-              Akash Ponnam
-            </motion.h1>
+            <div className="relative">
+              <SequentialRevealName />
+            </div>
             <motion.span
               variants={container(0.5)}
               initial="hidden"
